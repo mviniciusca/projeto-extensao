@@ -14,27 +14,35 @@ import { RecursosAdicionais } from "@/components/recursos-adicionais"
 import { Videos } from "@/components/videos"
 import { FAQ } from "@/components/faq"
 import { Conclusao } from "@/components/conclusao"
+import { SidebarNav } from "@/components/ui/sidebar-nav"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-zinc-950">
       <Header />
-      <main className="container mx-auto px-4 py-8 max-w-4xl">
-        <Introducao />
-        <AlertaPlagio />
-        <VisaoGeral />
-        <ObjetivosDesenvolvimento />
-        <MapaMental />
-        <TrilhaDesenvolvimento />
-        <IntegrandoIA />
-        <ExemplosApps />
-        <RelatorioFinal />
-        <OndeApresentar />
-        <RecursosAdicionais />
-        <Videos />
-        <FAQ />
-        <Conclusao />
-      </main>
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="flex relative gap-8">
+          <SidebarNav />
+          <main className="flex-1 py-8 md:pl-0">
+            <div className="w-full md:max-w-4xl">
+              <Introducao />
+              <AlertaPlagio />
+              <VisaoGeral />
+              <ObjetivosDesenvolvimento />
+              <MapaMental />
+              <TrilhaDesenvolvimento />
+              <IntegrandoIA />
+              <ExemplosApps />
+              <RelatorioFinal />
+              <OndeApresentar />
+              <RecursosAdicionais />
+              <Videos />
+              <FAQ />
+              <Conclusao />
+            </div>
+          </main>
+        </div>
+      </div>
       <Footer />
     </div>
   )

@@ -16,7 +16,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 max-w-4xl">
+      <div className="container mx-auto flex h-16 items-center justify-between px-4 max-w-7xl">
         <Link href="/" className="flex items-center space-x-2">
           <Notebook className="h-6 w-6 text-zinc-900 dark:text-white" />
           <span className="text-xl font-bold text-zinc-900 dark:text-white">Projeto de Extensão</span>

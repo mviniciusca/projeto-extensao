@@ -161,25 +161,29 @@ export function ObjetivosDesenvolvimento() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            {objectives.map((objective) => {
-              const Icon = objective.icon
-              return (
-                <Card key={objective.id} className="hover:shadow-lg transition-shadow">
-                  <CardContent className="p-4 flex flex-col gap-3">
-                    <div className={`w-10 h-10 rounded-lg ${objective.color} flex items-center justify-center`}>
-                      <Icon className="h-5 w-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-base mb-1 text-zinc-900 dark:text-white">
-                        {objective.id}. {objective.title}
-                      </h3>
-                      <p className="text-xs text-zinc-700 dark:text-zinc-300">{objective.description}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              )
-            })}
+          <div className="-mx-3 md:mx-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 px-3 md:px-0">
+              {objectives.map((objective) => {
+                const Icon = objective.icon
+                return (
+                  <Card key={objective.id} className="hover:shadow-lg transition-shadow">
+                    <CardContent className="p-4">
+                      <div className="flex flex-col gap-3">
+                        <div className={`w-10 h-10 rounded-lg ${objective.color} flex items-center justify-center`}>
+                          <Icon className="h-5 w-5 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-base mb-1 text-zinc-900 dark:text-white">
+                            {objective.id}. {objective.title}
+                          </h3>
+                          <p className="text-xs text-zinc-700 dark:text-zinc-300">{objective.description}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                )
+              })}
+            </div>
           </div>
         </CardContent>
       </Card>

@@ -65,7 +65,7 @@ export function Videos() {
         icon={<VideoIcon className="h-6 w-6" />}
       />
       
-      <div className="relative">
+      <div className="-mx-6 px-6 md:mx-0 md:px-0">
         <Carousel
           opts={{
             align: "start",
@@ -73,9 +73,9 @@ export function Videos() {
           }}
           className="w-full"
         >
-          <CarouselContent>
+          <CarouselContent className="-ml-2 md:-ml-4">
             {videos.map((video) => (
-              <CarouselItem key={video.id} className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={video.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                 <Link href={video.channelLink} target="_blank">
                   <Card className="overflow-hidden hover:bg-accent transition-colors">
                     <CardContent className="p-0">
@@ -104,8 +104,8 @@ export function Videos() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="hidden md:flex" />
+          <CarouselNext className="hidden md:flex" />
         </Carousel>
       </div>
     </section>

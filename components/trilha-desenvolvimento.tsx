@@ -8,11 +8,11 @@ export function TrilhaDesenvolvimento() {
     <section className="mb-12">
       <SectionTitle id="trilha" title="Trilha de Desenvolvimento Passo a Passo" icon={<Route className="h-6 w-6" />} />
 
-      <Tabs defaultValue="fase1">
-        <TabsList className="grid w-full grid-cols-3">
-          <TabsTrigger value="fase1">Fase 1: Escolha do Tema</TabsTrigger>
-          <TabsTrigger value="fase2">Fase 2: Criação do App</TabsTrigger>
-          <TabsTrigger value="fase3">Fase 3: Relatório Final</TabsTrigger>
+      <Tabs defaultValue="fase1" className="-mx-6 px-6 md:mx-0 md:px-0">
+        <TabsList className="w-full overflow-x-auto flex md:grid md:grid-cols-3 justify-start md:justify-stretch gap-2 md:gap-0">
+          <TabsTrigger value="fase1" className="flex-shrink-0">Fase 1: Escolha do Tema</TabsTrigger>
+          <TabsTrigger value="fase2" className="flex-shrink-0">Fase 2: Criação do App</TabsTrigger>
+          <TabsTrigger value="fase3" className="flex-shrink-0">Fase 3: Relatório Final</TabsTrigger>
         </TabsList>
 
         <TabsContent value="fase1">

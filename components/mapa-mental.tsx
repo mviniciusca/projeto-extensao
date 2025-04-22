@@ -20,7 +20,7 @@ export function MapaMental() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {/* Etapa 1 */}
             <div className="group relative">
               <Card className="transform transition-all duration-300 hover:scale-105 hover:shadow-lg border-l-4 border-l-blue-500">
@@ -118,7 +118,7 @@ export function MapaMental() {
             </div>
           </div>
 
-          <div className="mt-12 space-y-6 text-zinc-700 dark:text-zinc-300">
+          <div className="mt-12 px-3 md:px-6 space-y-6 text-zinc-700 dark:text-zinc-300">
             <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-950 dark:to-blue-900 p-6 rounded-lg">
               <h3 className="text-xl font-semibold text-blue-700 dark:text-blue-300 mb-4">
                 Como usar este mapa mental
