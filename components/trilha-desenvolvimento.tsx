@@ -195,8 +195,9 @@ export function TrilhaDesenvolvimento() {
                     <li>Espaçamento entre linhas de 1,5</li>
                     <li>Inclua capa com título, nome, curso e data</li>
                     <li>Numere as páginas (exceto a capa)</li>
-                    <li>Entregue em formato PDF</li>
+                    <li>Entregue em formato .DOC</li>
                     <li>Inclua o link para o aplicativo na Vercel</li>
+                    <li>Narre todo seu processo de aprendizado</li>
                   </ul>
                 </div>
               </div>
