@@ -47,10 +47,10 @@ const videos: Video[] = [
   },
     {
     id: "4",
-    title: "Projeto de Extensão Análise e Desenvolvimento de Sistemas - Como Fazer Unopar e Anhanguera",
-    channel: "ADS Code",
-    channelLink: "https://www.youtube.com/watch?v=ESzedQzEvIk",
-    thumbnail: "/videoframe_4236.png",
+    title: "Projeto de Extensão - Anhanguera 2023",
+    channel: "Hora do EAD",
+    channelLink: "https://www.youtube.com/watch?v=jybys83x3CA",
+    thumbnail: "/videoframe_1847.png",
     duration: "15:20"
   }
 
