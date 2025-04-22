@@ -1,5 +1,6 @@
 import { SectionTitle } from "@/components/section-title"
 import { Card, CardContent } from "@/components/ui/card"
+import { Sparkles } from "lucide-react"
 
 export function IntegrandoIA() {
   return (
@@ -8,6 +9,7 @@ export function IntegrandoIA() {
         id="ia"
         title="Integrando Inteligência Artificial no Desenvolvimento"
         subtitle="Como Utilizar IA para Potencializar seu Projeto"
+        icon={<Sparkles className="h-6 w-6" />}
       />
 
       <Card>

@@ -1,5 +1,6 @@
 import { SectionTitle } from "@/components/section-title"
 import { Card, CardContent } from "@/components/ui/card"
+import { BookOpen } from "lucide-react"
 
 export function Introducao() {
   return (
@@ -8,6 +9,7 @@ export function Introducao() {
         id="introducao"
         title="Guia de Desenvolvimento de Projeto de Extensão"
         subtitle="Mapa Mental para Resolução de Projeto Integrado com ODS da ONU"
+        icon={<BookOpen className="h-6 w-6" />}
       />
 
       <Card>

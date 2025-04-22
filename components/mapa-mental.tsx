@@ -1,10 +1,11 @@
 import { SectionTitle } from "@/components/section-title"
 import { Card, CardContent } from "@/components/ui/card"
+import { Map } from "lucide-react"
 
 export function MapaMental() {
   return (
     <section className="mb-12">
-      <SectionTitle id="mapa-mental" title="Mapa Mental: Do ODS ao Aplicativo" />
+      <SectionTitle id="mapa-mental" title="Mapa Mental: Do ODS ao Aplicativo" icon={<Map className="h-6 w-6" />} />
 
       <Card>
         <CardContent className="pt-6">

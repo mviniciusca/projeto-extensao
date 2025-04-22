@@ -1,10 +1,11 @@
 import { SectionTitle } from "@/components/section-title"
 import { Card, CardContent } from "@/components/ui/card"
+import { FileText } from "lucide-react"
 
 export function RelatorioFinal() {
   return (
     <section className="mb-12">
-      <SectionTitle id="relatorio" title="Preparando o Relatório Final" />
+      <SectionTitle id="relatorio" title="Preparando o Relatório Final" icon={<FileText className="h-6 w-6" />} />
 
       <Card>
         <CardContent className="pt-6">

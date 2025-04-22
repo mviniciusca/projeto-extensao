@@ -1,10 +1,11 @@
 import { SectionTitle } from "@/components/section-title"
 import { Card, CardContent } from "@/components/ui/card"
+import { CheckCircle } from "lucide-react"
 
 export function Conclusao() {
   return (
     <section className="mb-12">
-      <SectionTitle id="conclusao" title="Conclusão" />
+      <SectionTitle id="conclusao" title="Conclusão" icon={<CheckCircle className="h-6 w-6" />} />
 
       <Card>
         <CardContent className="pt-6">

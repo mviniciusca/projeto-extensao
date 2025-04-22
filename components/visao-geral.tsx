@@ -1,10 +1,11 @@
 import { SectionTitle } from "@/components/section-title"
 import { Card, CardContent } from "@/components/ui/card"
+import { Eye } from "lucide-react"
 
 export function VisaoGeral() {
   return (
     <section className="mb-12">
-      <SectionTitle id="visao-geral" title="Visão Geral do Projeto" />
+      <SectionTitle id="visao-geral" title="Visão Geral do Projeto" icon={<Eye className="h-6 w-6" />} />
 
       <Card>
         <CardContent className="pt-6">

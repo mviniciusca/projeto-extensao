@@ -1,10 +1,15 @@
 import { SectionTitle } from "@/components/section-title"
 import { Card, CardContent } from "@/components/ui/card"
+import { PresentationIcon } from "lucide-react"
 
 export function OndeApresentar() {
   return (
     <section className="mb-12">
-      <SectionTitle id="apresentar" title="Onde Apresentar Seu Projeto" />
+      <SectionTitle
+        id="apresentar"
+        title="Onde Apresentar Seu Projeto"
+        icon={<PresentationIcon className="h-6 w-6" />}
+      />
 
       <Card>
         <CardContent className="pt-6">

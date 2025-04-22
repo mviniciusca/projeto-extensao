@@ -1,11 +1,12 @@
 import { SectionTitle } from "@/components/section-title"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
+import { Link2 } from "lucide-react"
 
 export function RecursosAdicionais() {
   return (
     <section className="mb-12">
-      <SectionTitle id="recursos" title="Recursos Adicionais" />
+      <SectionTitle id="recursos" title="Recursos Adicionais" icon={<Link2 className="h-6 w-6" />} />
 
       <Card>
         <CardContent className="pt-6">

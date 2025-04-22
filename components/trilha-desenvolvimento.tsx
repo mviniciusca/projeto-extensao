@@ -1,11 +1,12 @@
 import { SectionTitle } from "@/components/section-title"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Route } from "lucide-react"
 
 export function TrilhaDesenvolvimento() {
   return (
     <section className="mb-12">
-      <SectionTitle id="trilha" title="Trilha de Desenvolvimento Passo a Passo" />
+      <SectionTitle id="trilha" title="Trilha de Desenvolvimento Passo a Passo" icon={<Route className="h-6 w-6" />} />
 
       <Tabs defaultValue="fase1">
         <TabsList className="grid w-full grid-cols-3">
@@ -17,9 +18,7 @@ export function TrilhaDesenvolvimento() {
         <TabsContent value="fase1">
           <Card>
             <CardContent className="pt-6">
-              <h3 className="text-lg font-semibold mb-4 text-zinc-900 dark:text-white">
-                FASE 1: ESCOLHA DO TEMA (1-2 semanas)
-              </h3>
+              <h3 className="text-lg font-semibold mb-4 text-zinc-900 dark:text-white">FASE 1: ESCOLHA DO TEMA</h3>
 
               <div className="space-y-6">
                 <div>
@@ -65,9 +64,7 @@ export function TrilhaDesenvolvimento() {
         <TabsContent value="fase2">
           <Card>
             <CardContent className="pt-6">
-              <h3 className="text-lg font-semibold mb-4 text-zinc-900 dark:text-white">
-                FASE 2: CRIAÇÃO DO APP (3-4 semanas)
-              </h3>
+              <h3 className="text-lg font-semibold mb-4 text-zinc-900 dark:text-white">FASE 2: CRIAÇÃO DO APP</h3>
 
               <div className="space-y-6">
                 <div>
@@ -115,9 +112,7 @@ export function TrilhaDesenvolvimento() {
         <TabsContent value="fase3">
           <Card>
             <CardContent className="pt-6">
-              <h3 className="text-lg font-semibold mb-4 text-zinc-900 dark:text-white">
-                FASE 3: RELATÓRIO FINAL (1-2 semanas)
-              </h3>
+              <h3 className="text-lg font-semibold mb-4 text-zinc-900 dark:text-white">FASE 3: RELATÓRIO FINAL</h3>
 
               <div className="space-y-6">
                 <div>

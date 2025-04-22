@@ -1,11 +1,12 @@
 import { SectionTitle } from "@/components/section-title"
 import { Card, CardContent } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Smartphone } from "lucide-react"
 
 export function ExemplosApps() {
   return (
     <section className="mb-12">
-      <SectionTitle id="exemplos" title="Exemplos de Aplicativos por ODS" />
+      <SectionTitle id="exemplos" title="Exemplos de Aplicativos por ODS" icon={<Smartphone className="h-6 w-6" />} />
 
       <Card>
         <CardContent className="pt-6">
