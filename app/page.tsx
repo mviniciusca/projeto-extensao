@@ -1,6 +1,7 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Introducao } from "@/components/introducao"
+import { AlertaPlagio } from "@/components/alerta-plagio"
 import { VisaoGeral } from "@/components/visao-geral"
 import { MapaMental } from "@/components/mapa-mental"
 import { TrilhaDesenvolvimento } from "@/components/trilha-desenvolvimento"
@@ -17,6 +18,7 @@ export default function Home() {
       <Header />
       <main className="container mx-auto px-4 py-8 max-w-4xl">
         <Introducao />
+        <AlertaPlagio />
         <VisaoGeral />
         <MapaMental />
         <TrilhaDesenvolvimento />
