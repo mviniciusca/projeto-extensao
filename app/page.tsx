@@ -11,6 +11,7 @@ import { ExemplosApps } from "@/components/exemplos-apps"
 import { RelatorioFinal } from "@/components/relatorio-final"
 import { OndeApresentar } from "@/components/onde-apresentar"
 import { RecursosAdicionais } from "@/components/recursos-adicionais"
+import { Videos } from "@/components/videos"
 import { FAQ } from "@/components/faq"
 import { Conclusao } from "@/components/conclusao"
 
@@ -30,6 +31,7 @@ export default function Home() {
         <RelatorioFinal />
         <OndeApresentar />
         <RecursosAdicionais />
+        <Videos />
         <FAQ />
         <Conclusao />
       </main>
