@@ -7,7 +7,7 @@ export function Introducao() {
     <section className="mb-12">
       <SectionTitle
         id="introducao"
-        title="Guia de Desenvolvimento de Projeto de Extensão"
+        title="Guia de Desenvolvimento de Projeto de Extensão I"
         subtitle="Mapa Mental para Resolução de Projeto Integrado com ODS da ONU"
         icon={<BookOpen className="h-6 w-6" />}
       />
