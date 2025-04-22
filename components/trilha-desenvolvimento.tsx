@@ -9,52 +9,52 @@ export function TrilhaDesenvolvimento() {
 
       <Tabs defaultValue="fase1">
         <TabsList className="grid w-full grid-cols-3">
-          <TabsTrigger value="fase1">Fase 1: Preparação</TabsTrigger>
-          <TabsTrigger value="fase2">Fase 2: Desenvolvimento</TabsTrigger>
-          <TabsTrigger value="fase3">Fase 3: Finalização</TabsTrigger>
+          <TabsTrigger value="fase1">Fase 1: Escolha do Tema</TabsTrigger>
+          <TabsTrigger value="fase2">Fase 2: Criação do App</TabsTrigger>
+          <TabsTrigger value="fase3">Fase 3: Relatório Final</TabsTrigger>
         </TabsList>
 
         <TabsContent value="fase1">
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-semibold mb-4 text-zinc-900 dark:text-white">
-                FASE 1: PREPARAÇÃO E ANÁLISE (2-3 semanas)
+                FASE 1: ESCOLHA DO TEMA (1-2 semanas)
               </h3>
 
               <div className="space-y-6">
                 <div>
-                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">1. Escolha do ODS e Problema</h4>
+                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">1. Escolha um ODS</h4>
                   <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
-                    <li>Analise os 17 ODS apresentados e escolha um que você se identifique</li>
-                    <li>Pesquise problemas reais relacionados ao ODS em sua comunidade</li>
-                    <li>Documente estatísticas e informações relevantes sobre o problema</li>
+                    <li>Acesse o site da ONU e leia sobre os 17 Objetivos de Desenvolvimento Sustentável</li>
+                    <li>Escolha um ODS que você se identifique ou tenha interesse</li>
+                    <li>Anote os principais pontos e metas desse ODS</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">2. Análise de Stakeholders</h4>
+                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">2. Identifique um problema real</h4>
                   <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
-                    <li>Identifique os usuários potenciais da sua solução</li>
-                    <li>Liste organizações que poderiam se beneficiar ou apoiar (ONGs, prefeituras, etc.)</li>
-                    <li>Entenda as necessidades específicas dos usuários finais</li>
+                    <li>Pesquise problemas locais relacionados ao ODS escolhido</li>
+                    <li>Converse com pessoas afetadas pelo problema (se possível)</li>
+                    <li>Busque dados e estatísticas sobre o problema</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">3. Benchmarking</h4>
+                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">3. Defina seu público-alvo</h4>
                   <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
-                    <li>Pesquise soluções existentes relacionadas ao problema</li>
-                    <li>Identifique pontos fortes e fracos das soluções atuais</li>
-                    <li>Defina o diferencial da sua proposta</li>
+                    <li>Quem são as pessoas afetadas pelo problema?</li>
+                    <li>Quem usaria seu aplicativo?</li>
+                    <li>Quais são as necessidades específicas desse público?</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">4. Definição do Escopo</h4>
+                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">4. Pesquise soluções existentes</h4>
                   <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
-                    <li>Estabeleça objetivos claros e mensuráveis para o aplicativo</li>
-                    <li>Delimite as funcionalidades principais e secundárias</li>
-                    <li>Crie um cronograma de desenvolvimento</li>
+                    <li>Procure aplicativos ou serviços que já tentam resolver esse problema</li>
+                    <li>Identifique pontos fortes e fracos dessas soluções</li>
+                    <li>Pense em como sua solução pode ser diferente ou melhor</li>
                   </ul>
                 </div>
               </div>
@@ -66,53 +66,45 @@ export function TrilhaDesenvolvimento() {
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-semibold mb-4 text-zinc-900 dark:text-white">
-                FASE 2: DESENVOLVIMENTO (4-6 semanas)
+                FASE 2: CRIAÇÃO DO APP (3-4 semanas)
               </h3>
 
               <div className="space-y-6">
                 <div>
-                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">1. Prototipagem e Design</h4>
+                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">1. Defina as funcionalidades</h4>
                   <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
-                    <li>Crie wireframes das principais telas</li>
-                    <li>Desenvolva o design visual alinhado com a temática do ODS</li>
-                    <li>Teste a usabilidade do protótipo com potenciais usuários</li>
+                    <li>Liste as principais funções que seu app deve ter</li>
+                    <li>Priorize as funcionalidades (essenciais x desejáveis)</li>
+                    <li>Pense em como cada função ajuda a resolver o problema</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">2. Arquitetura Técnica</h4>
+                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">2. Crie um protótipo simples</h4>
                   <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
-                    <li>Defina a estrutura do projeto React</li>
-                    <li>Escolha bibliotecas e frameworks complementares</li>
-                    <li>Planeje a estrutura de dados e integrações</li>
+                    <li>Desenhe as telas principais do seu app (pode ser no papel)</li>
+                    <li>Use ferramentas como Figma para criar um protótipo digital</li>
+                    <li>Teste o fluxo de navegação com algumas pessoas</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">3. Desenvolvimento Frontend</h4>
+                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">3. Desenvolva o aplicativo</h4>
                   <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
-                    <li>Configure o ambiente React</li>
-                    <li>Implemente as telas de acordo com o protótipo</li>
-                    <li>Desenvolva os componentes reutilizáveis</li>
-                    <li>Garanta responsividade para diferentes dispositivos</li>
+                    <li>Configure o ambiente React/JS</li>
+                    <li>Crie os componentes principais</li>
+                    <li>Implemente as funcionalidades uma por uma</li>
+                    <li>Teste cada funcionalidade após implementá-la</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">4. Integração e Funcionalidades</h4>
+                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">4. Publique na Vercel</h4>
                   <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
-                    <li>Implemente APIs necessárias (quando aplicável)</li>
-                    <li>Desenvolva lógica de negócio</li>
-                    <li>Integre serviços de terceiros relevantes para o projeto</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">5. Uso de IA como Auxiliar</h4>
-                  <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
-                    <li>Utilize o Claude para gerar ideias de funcionalidades</li>
-                    <li>Empregue o DeepSeek para auxiliar na codificação</li>
-                    <li>Documente como as IAs foram usadas no processo</li>
+                    <li>Crie uma conta na Vercel (gratuita)</li>
+                    <li>Conecte seu repositório GitHub</li>
+                    <li>Configure o deploy automático</li>
+                    <li>Teste o aplicativo no ambiente de produção</li>
                   </ul>
                 </div>
               </div>
@@ -124,43 +116,92 @@ export function TrilhaDesenvolvimento() {
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-semibold mb-4 text-zinc-900 dark:text-white">
-                FASE 3: FINALIZAÇÃO E IMPLANTAÇÃO (2-3 semanas)
+                FASE 3: RELATÓRIO FINAL (1-2 semanas)
               </h3>
 
               <div className="space-y-6">
                 <div>
-                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">1. Testes</h4>
+                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">1. Estrutura do Relatório</h4>
+                  <p className="mb-2 text-zinc-700 dark:text-zinc-300">
+                    Seu relatório deve conter as seguintes seções:
+                  </p>
                   <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
-                    <li>Realize testes de usabilidade</li>
-                    <li>Corrija bugs e problemas de interface</li>
-                    <li>Verifique o desempenho em diferentes navegadores</li>
+                    <li>Introdução (ODS escolhido e problema)</li>
+                    <li>Objetivos do projeto</li>
+                    <li>Metodologia utilizada</li>
+                    <li>Desenvolvimento do aplicativo</li>
+                    <li>Resultados esperados</li>
+                    <li>Conclusão</li>
+                    <li>Referências</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">2. Documentação</h4>
-                  <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
-                    <li>Prepare a documentação técnica do projeto</li>
-                    <li>Crie um manual do usuário</li>
-                    <li>Documente a conexão do projeto com o ODS escolhido</li>
-                  </ul>
+                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">2. Dicas para cada seção</h4>
+
+                  <div className="mb-2">
+                    <p className="font-medium text-zinc-800 dark:text-zinc-200">Introdução:</p>
+                    <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
+                      <li>Apresente o ODS escolhido</li>
+                      <li>Descreva o problema que você identificou</li>
+                      <li>Explique por que esse problema é importante</li>
+                    </ul>
+                  </div>
+
+                  <div className="mb-2">
+                    <p className="font-medium text-zinc-800 dark:text-zinc-200">Objetivos:</p>
+                    <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
+                      <li>Liste os objetivos gerais e específicos do seu projeto</li>
+                      <li>Explique como esses objetivos se relacionam com o ODS</li>
+                    </ul>
+                  </div>
+
+                  <div className="mb-2">
+                    <p className="font-medium text-zinc-800 dark:text-zinc-200">Metodologia:</p>
+                    <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
+                      <li>Descreva como você pesquisou o problema</li>
+                      <li>Explique como você definiu as funcionalidades do app</li>
+                      <li>Mencione as tecnologias utilizadas (React, Vercel, etc.)</li>
+                    </ul>
+                  </div>
+
+                  <div className="mb-2">
+                    <p className="font-medium text-zinc-800 dark:text-zinc-200">Desenvolvimento:</p>
+                    <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
+                      <li>Descreva as principais funcionalidades do aplicativo</li>
+                      <li>Explique como cada funcionalidade ajuda a resolver o problema</li>
+                      <li>Inclua capturas de tela das principais telas</li>
+                    </ul>
+                  </div>
+
+                  <div className="mb-2">
+                    <p className="font-medium text-zinc-800 dark:text-zinc-200">Resultados esperados:</p>
+                    <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
+                      <li>Descreva o impacto que você espera que seu app tenha</li>
+                      <li>Explique como o app contribui para o ODS escolhido</li>
+                      <li>Mencione possíveis métricas para medir o sucesso</li>
+                    </ul>
+                  </div>
+
+                  <div className="mb-2">
+                    <p className="font-medium text-zinc-800 dark:text-zinc-200">Conclusão:</p>
+                    <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
+                      <li>Resuma o que foi feito e aprendido</li>
+                      <li>Mencione desafios enfrentados e como foram superados</li>
+                      <li>Sugira melhorias futuras para o aplicativo</li>
+                    </ul>
+                  </div>
                 </div>
 
                 <div>
-                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">3. Implantação</h4>
+                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">3. Formatação e Entrega</h4>
                   <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
-                    <li>Configure o projeto para deploy na Vercel</li>
-                    <li>Realize a implantação e teste o ambiente de produção</li>
-                    <li>Crie um plano para manutenção futura</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="font-medium mb-2 text-zinc-900 dark:text-white">4. Apresentação e Relatório Final</h4>
-                  <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
-                    <li>Prepare uma apresentação sobre o projeto</li>
-                    <li>Documente o impacto potencial na comunidade</li>
-                    <li>Identifique possíveis evoluções futuras</li>
+                    <li>Use fonte Times New Roman ou Arial, tamanho 12</li>
+                    <li>Espaçamento entre linhas de 1,5</li>
+                    <li>Inclua capa com título, nome, curso e data</li>
+                    <li>Numere as páginas (exceto a capa)</li>
+                    <li>Entregue em formato PDF</li>
+                    <li>Inclua o link para o aplicativo na Vercel</li>
                   </ul>
                 </div>
               </div>
