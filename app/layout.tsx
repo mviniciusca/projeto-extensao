@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Guia de Projetos de Extensão - ADS",
   description: "Guia para desenvolvimento de projetos de extensão alinhados com os ODS da ONU",
-    generator: 'v0.dev'
+    generator: 'Next.js',
 }
 
 export default function RootLayout({
