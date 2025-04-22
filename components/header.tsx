@@ -5,6 +5,7 @@ import Link from "next/link"
 import { ModeToggle } from "@/components/mode-toggle"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { DownloadButton } from "@/components/download-button"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -21,6 +22,7 @@ export function Header() {
         </Link>
 
         <div className="hidden md:flex md:items-center md:space-x-4">
+          <DownloadButton />
           <nav className="flex items-center space-x-6">
             <Link
               href="#introducao"
@@ -51,6 +53,7 @@ export function Header() {
         </div>
 
         <div className="flex md:hidden items-center space-x-2">
+          <DownloadButton />
           <ModeToggle />
           <Button variant="ghost" size="icon" onClick={toggleMenu} className="text-zinc-700 dark:text-zinc-300">
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
