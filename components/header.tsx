@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { ModeToggle } from "@/components/mode-toggle"
-import { Menu, X, Notebook } from "lucide-react"
+import { Menu, X, Notebook, BookOpen, Compass, GitFork, Route, Cpu, Layout, FileText } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { DownloadButton } from "@/components/download-button"
 
@@ -26,27 +26,31 @@ export function Header() {
           <nav className="flex items-center space-x-6">
             <Link
               href="#introducao"
-              className="text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
             >
-              Introdução
+              <BookOpen className="h-4 w-4" />
+              <span>Introdução</span>
             </Link>
             <Link
               href="#visao-geral"
-              className="text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
             >
-              Visão Geral
+              <Compass className="h-4 w-4" />
+              <span>Visão Geral</span>
             </Link>
             <Link
               href="#mapa-mental"
-              className="text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
             >
-              Mapa Mental
+              <GitFork className="h-4 w-4" />
+              <span>Mapa Mental</span>
             </Link>
             <Link
               href="#trilha"
-              className="text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
             >
-              Trilha
+              <Route className="h-4 w-4" />
+              <span>Trilha</span>
             </Link>
           </nav>
           <DownloadButton />
@@ -67,52 +71,59 @@ export function Header() {
           <nav className="flex flex-col space-y-4 p-4">
             <Link
               href="#introducao"
-              className="text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
-              Introdução
+              <BookOpen className="h-4 w-4" />
+              <span>Introdução</span>
             </Link>
             <Link
               href="#visao-geral"
-              className="text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
-              Visão Geral
+              <Compass className="h-4 w-4" />
+              <span>Visão Geral</span>
             </Link>
             <Link
               href="#mapa-mental"
-              className="text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
-              Mapa Mental
+              <GitFork className="h-4 w-4" />
+              <span>Mapa Mental</span>
             </Link>
             <Link
               href="#trilha"
-              className="text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
-              Trilha
+              <Route className="h-4 w-4" />
+              <span>Trilha</span>
             </Link>
             <Link
               href="#ia"
-              className="text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
-              IA no Desenvolvimento
+              <Cpu className="h-4 w-4" />
+              <span>IA no Desenvolvimento</span>
             </Link>
             <Link
               href="#exemplos"
-              className="text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
-              Exemplos
+              <Layout className="h-4 w-4" />
+              <span>Exemplos</span>
             </Link>
             <Link
               href="#relatorio"
-              className="text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
-              Relatório Final
+              <FileText className="h-4 w-4" />
+              <span>Relatório Final</span>
             </Link>
           </nav>
         </div>
