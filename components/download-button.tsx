@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Download, GitBranch } from "lucide-react"
+import { GitBranch } from "lucide-react"
 import Link from "next/link"
 
 export function DownloadButton() {

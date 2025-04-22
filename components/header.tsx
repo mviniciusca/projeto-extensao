@@ -22,7 +22,6 @@ export function Header() {
         </Link>
 
         <div className="hidden md:flex md:items-center md:space-x-4">
-          <DownloadButton />
           <nav className="flex items-center space-x-6">
             <Link
               href="#introducao"
@@ -49,6 +48,7 @@ export function Header() {
               Trilha
             </Link>
           </nav>
+          <DownloadButton />
           <ModeToggle />
         </div>
 
