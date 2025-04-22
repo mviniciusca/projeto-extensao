@@ -4,14 +4,14 @@ import { Github } from "lucide-react"
 export function Footer() {
   return (
     <footer className="border-t border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
-      <div className="container mx-auto px-4 py-8 max-w-7xl">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
+      <div className="container mx-auto px-4 py-6 md:py-8 max-w-7xl">
+        <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between md:gap-0">
+          <div className="text-center md:text-left order-2 md:order-1">
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
               Feito com ❤️ por Marcos Coelho
             </p>
           </div>
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 order-1 md:order-2">
             <Link
               href="https://github.com/mviniciusca"
               target="_blank"

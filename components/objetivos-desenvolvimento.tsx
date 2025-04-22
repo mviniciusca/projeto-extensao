@@ -153,7 +153,7 @@ export function ObjetivosDesenvolvimento() {
 
       <Card>
         <CardContent className="pt-6">
-          <div className="mb-6 text-zinc-700 dark:text-zinc-300 text-sm">
+          <div className="mb-6 text-zinc-700 dark:text-zinc-300 text-sm md:text-base">
             <p>
               Os Objetivos de Desenvolvimento Sustentável (ODS) são um apelo universal à ação para acabar com a pobreza,
               proteger o planeta e melhorar a vida de todos. Escolha um ODS como base para desenvolver seu projeto e
@@ -167,16 +167,18 @@ export function ObjetivosDesenvolvimento() {
                 const Icon = objective.icon
                 return (
                   <Card key={objective.id} className="hover:shadow-lg transition-shadow">
-                    <CardContent className="p-4">
-                      <div className="flex flex-col gap-3">
-                        <div className={`w-10 h-10 rounded-lg ${objective.color} flex items-center justify-center`}>
-                          <Icon className="h-5 w-5 text-white" />
+                    <CardContent className="p-3 md:p-4">
+                      <div className="flex items-start gap-3 md:flex-col md:gap-3">
+                        <div className={`w-8 h-8 md:w-10 md:h-10 rounded-lg ${objective.color} flex items-center justify-center flex-shrink-0`}>
+                          <Icon className="h-4 w-4 md:h-5 md:w-5 text-white" />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-base mb-1 text-zinc-900 dark:text-white">
+                          <h3 className="text-sm md:text-base font-semibold mb-0.5 md:mb-1 text-zinc-900 dark:text-white">
                             {objective.id}. {objective.title}
                           </h3>
-                          <p className="text-xs text-zinc-700 dark:text-zinc-300">{objective.description}</p>
+                          <p className="text-xs md:text-sm text-zinc-700 dark:text-zinc-300 line-clamp-2 md:line-clamp-none">
+                            {objective.description}
+                          </p>
                         </div>
                       </div>
                     </CardContent>
