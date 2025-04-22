@@ -8,7 +8,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
-              © 2023 Marcos Coelho. Todos os direitos reservados.
+              © 2025 Marcos Coelho. Todos os direitos reservados.
             </p>
           </div>
           <div className="flex items-center space-x-4">
