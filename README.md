@@ -64,4 +64,3 @@ Este projeto está sob a licença MIT.
 #### Autor
 
 Marcos Coelho
-[GitHub](https://github.com/marvincoelho)
