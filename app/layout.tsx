@@ -8,9 +8,49 @@ import { Analytics } from '@vercel/analytics/next';
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-    title: "Guia de Projetos de Extensão - ADS",
-    description: "Guia para desenvolvimento de projetos de extensão alinhados com os ODS da ONU",
+    title: "Guia de Projeto de Extensão - Análise e Desenvolvimento de Sistemas",
+    description: "Guia para desenvolvimento de projetos de extensão alinhados com os ODS da ONU voltado para o curso de Análise e Desenvolvimento de Sistemas.",
     generator: 'Next.js',
+    applicationName: "Guia de Projeto de Extensão - ADS",
+    keywords: [
+        "Guia de Projetos de Extensão",
+        "Projetos de Extensão",
+        "Extensão",
+        "Desenvolvimento Sustentável",
+        "ODS",
+        "Sustentabilidade",
+        "Tecnologia",
+        "Inovação",
+        "Educação",
+        "Comunidade"
+    ],
+    authors: [{ name: "Marcos Coelho" }],
+    metadataBase: new URL('https://extensao-anhanguera.vercel.app'),
+    openGraph: {
+        type: 'website',
+        locale: 'pt_BR',
+        url: 'https://extensao-anhanguera.vercel.app',
+        title: 'Guia de Projeto de Extensão - Análise e Desenvolvimento de Sistemas',
+        description: 'Guia para desenvolvimento de projetos de extensão alinhados com os ODS da ONU',
+        siteName: 'Guia de Projeto de Extensão',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Guia de Projeto de Extensão - ADS',
+        description: 'Guia para desenvolvimento de projetos de extensão alinhados com os ODS da ONU',
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-image-preview': 'large',
+        },
+    },
+    verification: {
+        google: 'google-site-verification=xC9RqrYETndjNYHjLE5_TAiN0UfCmXfCWwLtWCD-O_g', // Você pode adicionar seu código de verificação do Google aqui
+    },
     icons: {
         icon: [
             {
