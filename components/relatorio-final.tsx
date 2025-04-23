@@ -17,6 +17,7 @@ export function RelatorioFinal() {
               <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
                 <li>ODS escolhido e justificativa</li>
                 <li>Problema abordado e sua relevância</li>
+                <li>Preenchimento dos Dados Obrigarórios como RA, Polo/Unidade da Faculdade</li>
               </ul>
             </div>
 
@@ -48,11 +49,12 @@ export function RelatorioFinal() {
             </div>
 
             <div>
-              <h4 className="font-medium mb-1 text-zinc-900 dark:text-white">5. Conclusão e Próximos Passos</h4>
+              <h4 className="font-medium mb-1 text-zinc-900 dark:text-white">5. Conclusão e Referências Bibliográficas</h4>
               <ul className="list-disc pl-5 text-zinc-700 dark:text-zinc-300 space-y-1">
                 <li>Lições aprendidas</li>
                 <li>Possibilidades de expansão</li>
                 <li>Contribuições para os ODS</li>
+                <li>Referências utilizadas</li>
               </ul>
             </div>
           </div>
