@@ -123,13 +123,17 @@ export function Welcome() {
     <div className="min-h-screen flex flex-col">
       {/* Header */}
       <header className="border-b border-zinc-200 dark:border-zinc-800">
-        <div className="container max-w-5xl mx-auto flex items-center justify-between h-16 px-4">
+        <div className="container mx-auto flex items-center justify-between h-16 px-4 max-w-7xl">
           <Link href="/" className="flex items-center space-x-2">
             <Notebook className="h-6 w-6 text-zinc-900 dark:text-white" />
             <span className="text-lg font-semibold text-zinc-900 dark:text-white">Projeto de Extensão</span>
           </Link>
           <div className="flex items-center gap-2">
-            <Button variant="outline" asChild className="flex items-center gap-2">
+            <Button 
+              variant="outline" 
+              asChild 
+              className="flex items-center gap-2 bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100"
+            >
               <Link href="/">
                 <BookOpen className="h-4 w-4" />
                 <span>Guia Completo</span>
@@ -240,7 +244,7 @@ export function Welcome() {
 
       {/* Footer */}
       <footer className="border-t border-zinc-200 dark:border-zinc-800">
-        <div className="container max-w-5xl mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-8 max-w-7xl">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center space-x-2">
               <span className="text-sm text-zinc-600 dark:text-zinc-400 flex items-center gap-1.5">
