@@ -4,10 +4,10 @@ import Link from "next/link"
 
 export function DownloadButton() {
   return (
-    <Button asChild className="gap-2">
+    <Button asChild className="gap-1.5 text-xs">
       <Link href="https://github.com/mviniciusca/projeto-extensao" download>
-        <GitBranch className="h-4 w-4" />
-       Github
+        <GitBranch className="h-3.5 w-3.5" />
+        Github
       </Link>
     </Button>
   )

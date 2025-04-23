@@ -22,34 +22,35 @@ export function Header() {
           <span className="text-xl font-bold text-zinc-900 dark:text-white">Projeto de Extensão</span>
         </Link>
 
+        {/* Desktop Navigation */}
         <div className="hidden md:flex md:items-center md:space-x-4">
           <nav className="flex items-center space-x-6">
             <Link
               href="/guia#introducao"
-              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              className="flex items-center space-x-2 text-xs font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
             >
-              <BookOpen className="h-4 w-4" />
+              <BookOpen className="h-3.5 w-3.5" />
               <span>Introdução</span>
             </Link>
             <Link
               href="/guia#visao-geral"
-              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              className="flex items-center space-x-2 text-xs font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
             >
-              <Compass className="h-4 w-4" />
+              <Compass className="h-3.5 w-3.5" />
               <span>Visão Geral</span>
             </Link>
             <Link
               href="/guia#mapa-mental"
-              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              className="flex items-center space-x-2 text-xs font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
             >
-              <GitFork className="h-4 w-4" />
+              <GitFork className="h-3.5 w-3.5" />
               <span>Mapa Mental</span>
             </Link>
             <Link
               href="/guia#trilha"
-              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              className="flex items-center space-x-2 text-xs font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
             >
-              <Route className="h-4 w-4" />
+              <Route className="h-3.5 w-3.5" />
               <span>Trilha</span>
             </Link>
           </nav>
@@ -57,8 +58,8 @@ export function Header() {
           <ModeToggle />
         </div>
 
+        {/* Mobile Navigation Toggle */}
         <div className="flex md:hidden items-center space-x-2">
-          <DownloadButton />
           <ModeToggle />
           <Button variant="ghost" size="icon" onClick={toggleMenu} className="text-zinc-700 dark:text-zinc-300">
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -66,6 +67,7 @@ export function Header() {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
           <nav className="flex flex-col space-y-4 p-4">
@@ -125,6 +127,11 @@ export function Header() {
               <FileText className="h-4 w-4" />
               <span>Relatório Final</span>
             </Link>
+            <div className="pt-4 border-t border-zinc-200 dark:border-zinc-800">
+              <div className="w-full">
+                <DownloadButton />
+              </div>
+            </div>
           </nav>
         </div>
       )}
