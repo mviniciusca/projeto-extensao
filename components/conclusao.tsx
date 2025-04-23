@@ -1,6 +1,7 @@
 import { SectionTitle } from "@/components/section-title"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle } from "lucide-react"
+import Image from "next/image"
 
 export function Conclusao() {
     return (
@@ -29,6 +30,22 @@ export function Conclusao() {
 
                             <p>
                                 Esta é a minha contribuição para a comunidade, e espero que inspire você a retribuir. Se este guia foi útil, compartilhe-o com seus colegas e amigos. A troca de conhecimento é essencial para o crescimento coletivo e para a construção de um futuro mais sustentável. Juntos, podemos criar um mundo mais justo e equitativo para todos.
+                            </p>
+                            <p>
+                                Sou um aluno como você e consegui nota máxima no meu projeto seguindo os conceitos desse guia. Use-o como inspiração, mas nunca como cópia. Cada projeto é único e deve refletir a sua visão e criatividade. O importante é que você aprenda e se divirta no processo de desenvolvimento.
+                            </p>
+                            <div className="flex justify-center w-full my-4">
+                                <Image
+                                    src="/note.png"
+                                    alt="Nota do projeto"
+                                    width={500}
+                                    height={300}
+                                    className="rounded-lg"
+                                />
+                            </div>
+
+                            <p>
+                                Agradeço por ler este guia e desejo a você muito sucesso em seus projetos futuros. Que eles sejam repletos de aprendizado, inovação e impacto positivo.
                             </p>
                         </div>
                     </div>
