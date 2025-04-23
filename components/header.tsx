@@ -25,28 +25,28 @@ export function Header() {
         <div className="hidden md:flex md:items-center md:space-x-4">
           <nav className="flex items-center space-x-6">
             <Link
-              href="#introducao"
+              href="/guia#introducao"
               className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
             >
               <BookOpen className="h-4 w-4" />
               <span>Introdução</span>
             </Link>
             <Link
-              href="#visao-geral"
+              href="/guia#visao-geral"
               className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
             >
               <Compass className="h-4 w-4" />
               <span>Visão Geral</span>
             </Link>
             <Link
-              href="#mapa-mental"
+              href="/guia#mapa-mental"
               className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
             >
               <GitFork className="h-4 w-4" />
               <span>Mapa Mental</span>
             </Link>
             <Link
-              href="#trilha"
+              href="/guia#trilha"
               className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
             >
               <Route className="h-4 w-4" />
@@ -70,7 +70,7 @@ export function Header() {
         <div className="md:hidden border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
           <nav className="flex flex-col space-y-4 p-4">
             <Link
-              href="#introducao"
+              href="/guia#introducao"
               className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -78,7 +78,7 @@ export function Header() {
               <span>Introdução</span>
             </Link>
             <Link
-              href="#visao-geral"
+              href="/guia#visao-geral"
               className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -86,7 +86,7 @@ export function Header() {
               <span>Visão Geral</span>
             </Link>
             <Link
-              href="#mapa-mental"
+              href="/guia#mapa-mental"
               className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -94,7 +94,7 @@ export function Header() {
               <span>Mapa Mental</span>
             </Link>
             <Link
-              href="#trilha"
+              href="/guia#trilha"
               className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -102,7 +102,7 @@ export function Header() {
               <span>Trilha</span>
             </Link>
             <Link
-              href="#ia"
+              href="/guia#ia"
               className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -110,7 +110,7 @@ export function Header() {
               <span>IA no Desenvolvimento</span>
             </Link>
             <Link
-              href="#exemplos"
+              href="/guia#exemplos"
               className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -118,7 +118,7 @@ export function Header() {
               <span>Exemplos</span>
             </Link>
             <Link
-              href="#relatorio"
+              href="/guia#relatorio"
               className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
               onClick={() => setIsMenuOpen(false)}
             >

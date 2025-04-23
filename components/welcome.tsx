@@ -129,14 +129,20 @@ export function Welcome() {
             <span className="text-lg font-semibold text-zinc-900 dark:text-white">Projeto de Extensão</span>
           </Link>
           <div className="flex items-center gap-2">
+            <Button variant="outline" asChild className="flex items-center gap-2">
+              <Link href="/guia">
+                <BookOpen className="h-4 w-4" />
+                <span>Guia Completo</span>
+              </Link>
+            </Button>
             <Button 
               variant="outline" 
               asChild 
               className="flex items-center gap-2 bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100"
             >
-              <Link href="/">
-                <BookOpen className="h-4 w-4" />
-                <span>Guia Completo</span>
+              <Link href="https://github.com/mviniciusca/projeto-extensao" target="_blank" rel="noopener noreferrer">
+                <Github className="h-4 w-4" />
+                <span>GitHub</span>
               </Link>
             </Button>
             <ModeToggle />
@@ -186,7 +192,7 @@ export function Welcome() {
                 {searchResults.map((result) => (
                   <Link
                     key={result.id}
-                    href={`/#${result.id}`}
+                    href={`/guia#${result.id}`}
                     className="block px-4 py-3 hover:bg-zinc-100 dark:hover:bg-zinc-800 border-b border-zinc-100 dark:border-zinc-800 last:border-0"
                     onClick={() => setSearchQuery("")}
                   >

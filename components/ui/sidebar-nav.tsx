@@ -1,40 +1,78 @@
+"use client"
+
 import Link from "next/link"
-import { BookOpen, Compass, GitFork, Route, Cpu, Layout, FileText, Presentation, FileQuestion, Folder, Video } from "lucide-react"
+import { usePathname } from "next/navigation"
+import { cn } from "@/lib/utils"
+
+const items = [
+  {
+    title: "Introdução",
+    href: "/guia#introducao",
+  },
+  {
+    title: "Visão Geral",
+    href: "/guia#visao-geral",
+  },
+  {
+    title: "Mapa Mental",
+    href: "/guia#mapa-mental",
+  },
+  {
+    title: "Trilha de Desenvolvimento",
+    href: "/guia#trilha",
+  },
+  {
+    title: "IA no Desenvolvimento",
+    href: "/guia#ia",
+  },
+  {
+    title: "Exemplos de Apps",
+    href: "/guia#exemplos",
+  },
+  {
+    title: "Relatório Final",
+    href: "/guia#relatorio",
+  },
+  {
+    title: "Onde Apresentar",
+    href: "/guia#apresentar",
+  },
+  {
+    title: "Recursos Adicionais",
+    href: "/guia#recursos",
+  },
+  {
+    title: "Vídeos",
+    href: "/guia#videos",
+  },
+  {
+    title: "FAQ",
+    href: "/guia#faq",
+  },
+]
 
 export function SidebarNav() {
-  const sections = [
-    { id: "introducao", title: "Introdução", icon: BookOpen },
-    { id: "visao-geral", title: "Visão Geral", icon: Compass },
-    { id: "mapa-mental", title: "Mapa Mental", icon: GitFork },
-    { id: "trilha", title: "Trilha de Desenvolvimento", icon: Route },
-    { id: "ia", title: "IA no Desenvolvimento", icon: Cpu },
-    { id: "exemplos", title: "Exemplos de Apps", icon: Layout },
-    { id: "relatorio", title: "Relatório Final", icon: FileText },
-    { id: "apresentar", title: "Onde Apresentar", icon: Presentation },
-    { id: "recursos", title: "Recursos Adicionais", icon: Folder },
-    { id: "videos", title: "Vídeos", icon: Video },
-    { id: "faq", title: "FAQ", icon: FileQuestion }
-  ]
+  const pathname = usePathname()
 
   return (
-    <div className="w-full md:w-64 shrink-0">
-      <div className="h-[calc(100vh-4rem)] sticky top-16 overflow-y-auto py-6">
-        <ul className="space-y-2">
-          {sections.map((section) => {
-            const Icon = section.icon
-            return (
-              <li key={section.id}>
-                <Link
-                  href={`#${section.id}`}
-                  className="flex items-center px-4 py-2 space-x-3 text-sm text-zinc-700 hover:text-zinc-900 hover:bg-zinc-100 rounded-md transition-colors dark:text-zinc-300 dark:hover:text-white dark:hover:bg-zinc-800"
-                >
-                  <Icon className="h-4 w-4 shrink-0" />
-                  <span>{section.title}</span>
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
+    <div className="w-[240px] lg:w-[280px] hidden md:block">
+      <div className="sticky top-24">
+        <nav className="grid items-start gap-2">
+          {items.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={cn(
+                "flex items-center px-3 py-2 text-sm font-medium rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800",
+                pathname === item.href
+                  ? "text-zinc-900 bg-zinc-100 dark:text-white dark:bg-zinc-800"
+                  : "text-zinc-600 dark:text-zinc-400"
+              )}
+            >
+              {item.title}
+            </Link>
+          ))}
+        </nav>
       </div>
     </div>
   )
