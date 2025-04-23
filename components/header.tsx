@@ -1,139 +1,38 @@
 "use client"
 
-import { useState } from "react"
 import Link from "next/link"
-import { ModeToggle } from "@/components/mode-toggle"
-import { Menu, X, Notebook, BookOpen, Compass, GitFork, Route, Cpu, Layout, FileText } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { DownloadButton } from "@/components/download-button"
+import { ModeToggle } from "@/components/mode-toggle"
+import { Github, BookOpen, Notebook } from "lucide-react"
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
-
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 max-w-7xl">
+    <header className="border-b border-zinc-200 dark:border-zinc-800">
+      <div className="container mx-auto flex items-center justify-between h-16 px-4 max-w-7xl">
         <Link href="/" className="flex items-center space-x-2">
-          <Notebook className="h-6 w-6 text-zinc-900 dark:text-white" />
-          <span className="text-xl font-bold text-zinc-900 dark:text-white">Projeto de Extensão</span>
+          <Notebook className="h-5 w-5 text-zinc-900 dark:text-white" />
+          <span className="text-sm font-semibold text-zinc-900 dark:text-white">Projeto de Extensão</span>
         </Link>
-
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex md:items-center md:space-x-4">
-          <nav className="flex items-center space-x-6">
-            <Link
-              href="/guia#introducao"
-              className="flex items-center space-x-2 text-xs font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
-            >
+        <div className="flex items-center gap-2">
+          <Button variant="outline" asChild className="flex items-center gap-1.5 text-xs">
+            <Link href="/guia">
               <BookOpen className="h-3.5 w-3.5" />
-              <span>Introdução</span>
+              <span>Guia Completo</span>
             </Link>
-            <Link
-              href="/guia#visao-geral"
-              className="flex items-center space-x-2 text-xs font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
-            >
-              <Compass className="h-3.5 w-3.5" />
-              <span>Visão Geral</span>
+          </Button>
+          <Button 
+            variant="outline" 
+            asChild 
+            className="flex items-center gap-1.5 text-xs"
+          >
+            <Link href="https://github.com/mviniciusca/projeto-extensao" target="_blank" rel="noopener noreferrer">
+              <Github className="h-3.5 w-3.5" />
+              <span>GitHub</span>
             </Link>
-            <Link
-              href="/guia#mapa-mental"
-              className="flex items-center space-x-2 text-xs font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
-            >
-              <GitFork className="h-3.5 w-3.5" />
-              <span>Mapa Mental</span>
-            </Link>
-            <Link
-              href="/guia#trilha"
-              className="flex items-center space-x-2 text-xs font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
-            >
-              <Route className="h-3.5 w-3.5" />
-              <span>Trilha</span>
-            </Link>
-          </nav>
-          <DownloadButton />
+          </Button>
           <ModeToggle />
         </div>
-
-        {/* Mobile Menu Button */}
-        <Button variant="ghost" size="icon" onClick={toggleMenu} className="md:hidden">
-          {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </Button>
       </div>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
-          <nav className="flex flex-col space-y-4 p-4">
-            <Link
-              href="/guia#introducao"
-              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <BookOpen className="h-4 w-4" />
-              <span>Introdução</span>
-            </Link>
-            <Link
-              href="/guia#visao-geral"
-              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <Compass className="h-4 w-4" />
-              <span>Visão Geral</span>
-            </Link>
-            <Link
-              href="/guia#mapa-mental"
-              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <GitFork className="h-4 w-4" />
-              <span>Mapa Mental</span>
-            </Link>
-            <Link
-              href="/guia#trilha"
-              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <Route className="h-4 w-4" />
-              <span>Trilha</span>
-            </Link>
-            <Link
-              href="/guia#ia"
-              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <Cpu className="h-4 w-4" />
-              <span>IA no Desenvolvimento</span>
-            </Link>
-            <Link
-              href="/guia#exemplos"
-              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <Layout className="h-4 w-4" />
-              <span>Exemplos</span>
-            </Link>
-            <Link
-              href="/guia#relatorio"
-              className="flex items-center space-x-2 text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <FileText className="h-4 w-4" />
-              <span>Relatório Final</span>
-            </Link>
-            <div className="flex flex-col space-y-4 pt-4 border-t border-zinc-200 dark:border-zinc-800">
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Tema</span>
-                <ModeToggle />
-              </div>
-              <DownloadButton className="w-full" />
-            </div>
-          </nav>
-        </div>
-      )}
     </header>
   )
 }

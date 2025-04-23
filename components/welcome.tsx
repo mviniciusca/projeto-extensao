@@ -1,11 +1,11 @@
 "use client"
 
-import { Github, Search, Twitter, Notebook, BookOpen, Compass, GitFork, Route, Cpu, Layout, FileText, Presentation, Link2, Video, FileQuestion, X, Heart } from "lucide-react"
+import { Search, Twitter, Github, Notebook, Heart, X, BookOpen, Compass, GitFork, Route, Cpu, Layout, FileText, Link2, Video, FileQuestion, Presentation } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { Header } from "@/components/header"
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import { ModeToggle } from "@/components/mode-toggle"
 
 // Conteúdo pesquisável expandido
 const searchableContent = [
@@ -130,34 +130,7 @@ export function Welcome() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header */}
-      <header className="border-b border-zinc-200 dark:border-zinc-800">
-        <div className="container mx-auto flex items-center justify-between h-16 px-4 max-w-7xl">
-          <Link href="/" className="flex items-center space-x-2">
-            <Notebook className="h-5 w-5 text-zinc-900 dark:text-white" />
-            <span className="text-sm font-semibold text-zinc-900 dark:text-white">Projeto de Extensão</span>
-          </Link>
-          <div className="flex items-center gap-2">
-            <Button variant="outline" asChild className="flex items-center gap-1.5 text-xs">
-              <Link href="/guia">
-                <BookOpen className="h-3.5 w-3.5" />
-                <span>Guia Completo</span>
-              </Link>
-            </Button>
-            <Button 
-              variant="outline" 
-              asChild 
-              className="flex items-center gap-1.5 text-xs bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100"
-            >
-              <Link href="https://github.com/mviniciusca/projeto-extensao" target="_blank" rel="noopener noreferrer">
-                <Github className="h-3.5 w-3.5" />
-                <span>GitHub</span>
-              </Link>
-            </Button>
-            <ModeToggle />
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Main Content */}
       <main className="flex-1 flex items-center justify-center px-4">
