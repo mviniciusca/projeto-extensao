@@ -145,7 +145,7 @@ export function Welcome() {
             <div className="inline-flex p-3 rounded-full bg-zinc-100 dark:bg-zinc-900 mb-4">
               <Notebook className="h-8 w-8 text-zinc-900 dark:text-white" />
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">
+            <h1 className="text-3xl font-bold text-zinc-900 dark:text-white">
               Guia de Projeto de Extensão
             </h1>
             <p className="text-sm text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
