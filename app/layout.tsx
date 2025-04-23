@@ -57,7 +57,10 @@ export const metadata: Metadata = {
         },
     },
     verification: {
-        google: 'google-site-verification=xC9RqrYETndjNYHjLE5_TAiN0UfCmXfCWwLtWCD-O_g', // Você pode adicionar seu código de verificação do Google aqui
+        google: 'xC9RqrYETndjNYHjLE5_TAiN0UfCmXfCWwLtWCD-O_g',
+        other: {
+            "google-site-verification": ['xC9RqrYETndjNYHjLE5_TAiN0UfCmXfCWwLtWCD-O_g']
+        }
     },
     icons: {
         icon: [
