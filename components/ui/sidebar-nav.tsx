@@ -17,7 +17,7 @@ export function SidebarNav() {
   ]
 
   return (
-    <div className="hidden md:block w-64 shrink-0">
+    <div className="w-full md:w-64 shrink-0">
       <div className="h-[calc(100vh-4rem)] sticky top-16 overflow-y-auto py-6">
         <ul className="space-y-2">
           {sections.map((section) => {

@@ -1,28 +1,80 @@
 "use client"
 
-import { Github, Search, Twitter, Notebook } from "lucide-react"
+import { Github, Search, Twitter, Notebook, Target, Code, FileText, PenTool, Cpu, Layout, X, Video, BookOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import { useState } from "react"
 
-const sections = [
-  { id: "introducao", title: "Introdução" },
-  { id: "visao-geral", title: "Visão Geral" },
-  { id: "mapa-mental", title: "Mapa Mental" },
-  { id: "trilha", title: "Trilha de Desenvolvimento" },
-  { id: "ia", title: "IA no Desenvolvimento" },
-  { id: "exemplos", title: "Exemplos de Apps" },
-  { id: "relatorio", title: "Relatório Final" },
-  { id: "apresentar", title: "Onde Apresentar" },
-  { id: "recursos", title: "Recursos Adicionais" },
-  { id: "videos", title: "Vídeos" },
-  { id: "faq", title: "FAQ" }
+// Conteúdo pesquisável expandido
+const searchableContent = [
+  {
+    id: "introducao",
+    title: "Introdução",
+    content: "Guia para alunos de ADS desenvolverem projetos de extensão. Desenvolvimento de aplicativos baseados nos Objetivos de Desenvolvimento Sustentável (ODS) da ONU."
+  },
+  {
+    id: "visao-geral",
+    title: "Visão Geral",
+    content: "Desenvolver uma aplicação web com impacto social positivo. Requisitos: React/JS, Vercel, documentação completa, alinhamento com ODS."
+  },
+  {
+    id: "mapa-mental",
+    title: "Mapa Mental",
+    content: "Processo de ideação: escolha do ODS, análise do problema, concepção do aplicativo, validação da ideia. Transforme uma ideia em solução tecnológica."
+  },
+  {
+    id: "trilha",
+    title: "Trilha de Desenvolvimento",
+    content: "Passo a passo: escolha do ODS, identificação do problema real, definição do público-alvo, pesquisa de soluções existentes. Desenvolvimento prático do projeto."
+  },
+  {
+    id: "ia",
+    title: "IA no Desenvolvimento",
+    content: "Uso de IA como ferramenta auxiliar. ChatGPT, Claude, DeepSeek para ideação. Midjourney/DALL-E para design. GitHub Copilot para desenvolvimento."
+  },
+  {
+    id: "exemplos",
+    title: "Exemplos de Apps",
+    content: "Exemplos por ODS: BenefitFinder (pobreza), FoodShare (fome), MedAlert (saúde), SkillsForAll (educação), SafeSpace (igualdade)."
+  },
+  {
+    id: "relatorio",
+    title: "Relatório Final",
+    content: "Estrutura: Introdução, Especificação Técnica, Impacto Social, Viabilidade e Implementação, Conclusão. Documentação completa do projeto."
+  },
+  {
+    id: "apresentar",
+    title: "Onde Apresentar",
+    content: "ONGs, Secretarias Municipais, Incubadoras, Eventos Universitários, Hackathons, Empresas com programas sociais."
+  },
+  {
+    id: "recursos",
+    title: "Recursos Adicionais",
+    content: "Links úteis: Documentação React, Vercel, ODS da ONU, GitHub Student Pack, Figma."
+  },
+  {
+    id: "faq",
+    title: "FAQ",
+    content: "Perguntas frequentes sobre relatório, documentação, depoimentos, entregas e processo."
+  }
+]
+
+// Tags para sugestões de busca
+const tags = [
+  { id: "ods", title: "ODS", icon: Target, weight: "lg" },
+  { id: "desenvolvimento", title: "Dev", icon: Code, weight: "lg" },
+  { id: "react", title: "React", icon: PenTool, weight: "lg" },
+  { id: "relatorio", title: "Docs", icon: FileText, weight: "md" },
+  { id: "ia", title: "IA", icon: Cpu, weight: "md" },
+  { id: "exemplos", title: "Apps", icon: Layout, weight: "md" },
+  { id: "videos", title: "Vídeos", icon: Video, weight: "sm" }
 ]
 
 export function Welcome() {
   const [searchQuery, setSearchQuery] = useState("")
-  const [searchResults, setSearchResults] = useState<typeof sections>([])
+  const [searchResults, setSearchResults] = useState<typeof searchableContent>([])
+  const [showSuggestions, setShowSuggestions] = useState(true)
 
   const handleSearch = (query: string) => {
     setSearchQuery(query)
@@ -31,10 +83,30 @@ export function Welcome() {
       return
     }
 
-    const results = sections.filter(section => 
-      section.title.toLowerCase().includes(query.toLowerCase())
+    const results = searchableContent.filter(item => 
+      item.title.toLowerCase().includes(query.toLowerCase()) ||
+      item.content.toLowerCase().includes(query.toLowerCase())
     )
     setSearchResults(results)
+  }
+
+  // Função para limpar a busca
+  const clearSearch = () => {
+    setSearchQuery("")
+    setSearchResults([])
+  }
+
+  // Função para obter a classe de estilo baseada no peso da tag
+  const getTagStyle = (weight: string) => {
+    const baseStyle = "inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-zinc-200 dark:border-zinc-800 transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800 cursor-pointer"
+    switch (weight) {
+      case "lg":
+        return `${baseStyle} text-sm font-medium`
+      case "md":
+        return `${baseStyle} text-xs`
+      default:
+        return `${baseStyle} text-xs text-zinc-600 dark:text-zinc-400`
+    }
   }
 
   return (
@@ -58,24 +130,34 @@ export function Welcome() {
       <main className="flex-1 flex items-center justify-center px-4">
         <div className="max-w-xl w-full">
           <div className="text-center mb-8">
-            <h1 className="text-2xl md:text-3xl font-semibold mb-4 text-zinc-900 dark:text-white">
+            <h1 className="text-xl md:text-2xl font-semibold mb-3 bg-gradient-to-r from-zinc-900 to-zinc-500 dark:from-zinc-300 dark:to-zinc-600 bg-clip-text text-transparent">
               Desenvolvimento de Projetos Extensionistas
             </h1>
-            <p className="text-base text-zinc-600 dark:text-zinc-400">
+            <p className="text-sm text-zinc-600 dark:text-zinc-400">
               Guia prático para projetos alinhados aos ODS da ONU
             </p>
           </div>
 
           {/* Search Bar */}
-          <div className="relative mb-8">
+          <div className="relative mb-6">
             <Input
               type="text"
               placeholder="Buscar conteúdo..."
               value={searchQuery}
               onChange={(e) => handleSearch(e.target.value)}
-              className="pl-10 pr-4 py-2 w-full"
+              className="pl-10 pr-10 py-2 w-full"
             />
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zinc-400" />
+            
+            {searchQuery && (
+              <button
+                onClick={clearSearch}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300"
+              >
+                <X className="h-4 w-4" />
+                <span className="sr-only">Limpar busca</span>
+              </button>
+            )}
             
             {/* Search Results Dropdown */}
             {searchResults.length > 0 && (
@@ -84,15 +166,57 @@ export function Welcome() {
                   <Link
                     key={result.id}
                     href={`/#${result.id}`}
-                    className="block px-4 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-left text-sm"
+                    className="block px-4 py-3 hover:bg-zinc-100 dark:hover:bg-zinc-800 border-b border-zinc-100 dark:border-zinc-800 last:border-0"
                     onClick={() => setSearchQuery("")}
                   >
-                    {result.title}
+                    <div className="text-sm font-medium text-zinc-900 dark:text-white mb-1">{result.title}</div>
+                    <div className="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-2">{result.content}</div>
                   </Link>
                 ))}
               </div>
             )}
           </div>
+
+          {/* Tag Cloud */}
+          {showSuggestions && (
+            <div className="text-center mb-8">
+              <div className="flex items-center justify-between mb-3">
+                <p className="text-xs text-zinc-500 dark:text-zinc-400">
+                  Sugestões:
+                </p>
+                <button
+                  onClick={() => setShowSuggestions(false)}
+                  className="text-xs text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-300"
+                >
+                  Ocultar sugestões
+                </button>
+              </div>
+              <div className="flex flex-wrap justify-center gap-2">
+                {tags.map((tag) => {
+                  const Icon = tag.icon
+                  return (
+                    <button
+                      key={tag.id}
+                      onClick={() => handleSearch(tag.title)}
+                      className={getTagStyle(tag.weight)}
+                    >
+                      <Icon className="h-3.5 w-3.5" />
+                      <span>{tag.title}</span>
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+          )}
+
+          {!showSuggestions && (
+            <button
+              onClick={() => setShowSuggestions(true)}
+              className="block mx-auto text-xs text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-300 mb-8"
+            >
+              Mostrar sugestões
+            </button>
+          )}
 
           {/* Social Links */}
           <div className="flex items-center justify-center gap-4">
