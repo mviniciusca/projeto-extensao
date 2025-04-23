@@ -1,10 +1,11 @@
 "use client"
 
-import { Github, Search, Twitter, Notebook, BookOpen, Compass, GitFork, Route, Cpu, Layout, FileText, Presentation, Link2, Video, FileQuestion, X } from "lucide-react"
+import { Github, Search, Twitter, Notebook, BookOpen, Compass, GitFork, Route, Cpu, Layout, FileText, Presentation, Link2, Video, FileQuestion, X, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import { useState } from "react"
+import { ModeToggle } from "@/components/mode-toggle"
 
 // Conteúdo pesquisável expandido
 const searchableContent = [
@@ -127,12 +128,15 @@ export function Welcome() {
             <Notebook className="h-6 w-6 text-zinc-900 dark:text-white" />
             <span className="text-lg font-semibold text-zinc-900 dark:text-white">Projeto de Extensão</span>
           </Link>
-          <Button variant="outline" asChild className="flex items-center gap-2">
-            <Link href="/">
-              <BookOpen className="h-4 w-4" />
-              <span>Guia Completo</span>
-            </Link>
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button variant="outline" asChild className="flex items-center gap-2">
+              <Link href="/">
+                <BookOpen className="h-4 w-4" />
+                <span>Guia Completo</span>
+              </Link>
+            </Button>
+            <ModeToggle />
+          </div>
         </div>
       </header>
 
@@ -234,13 +238,13 @@ export function Welcome() {
           {/* Social Links */}
           <div className="flex items-center justify-center gap-4">
             <Button variant="outline" size="icon" asChild>
-              <Link href="https://github.com/marvindev2022" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/mviniciusca" target="_blank" rel="noopener noreferrer">
                 <Github className="h-4 w-4" />
                 <span className="sr-only">GitHub</span>
               </Link>
             </Button>
             <Button variant="outline" size="icon" asChild>
-              <Link href="https://twitter.com/marvindev2022" target="_blank" rel="noopener noreferrer">
+              <Link href="https://twitter.com/marcosvca_" target="_blank" rel="noopener noreferrer">
                 <Twitter className="h-4 w-4" />
                 <span className="sr-only">Twitter</span>
               </Link>
@@ -254,9 +258,8 @@ export function Welcome() {
         <div className="container max-w-5xl mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center space-x-2">
-              <Notebook className="h-5 w-5 text-zinc-700 dark:text-zinc-300" />
-              <span className="text-sm text-zinc-600 dark:text-zinc-400">
-                © 2024 Projeto de Extensão
+              <span className="text-sm text-zinc-600 dark:text-zinc-400 flex items-center gap-1.5">
+                Feito com <Heart className="h-3.5 w-3.5 text-red-500 fill-red-500" /> por Marcos Coelho
               </span>
             </div>
             <div className="flex items-center space-x-4">
@@ -273,12 +276,20 @@ export function Welcome() {
                 FAQ
               </Link>
               <Link
-                href="https://github.com/marvindev2022"
+                href="https://github.com/mviniciusca"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
               >
-                GitHub
+                <Github className="h-4 w-4" />
+              </Link>
+              <Link
+                href="https://twitter.com/marcosvca_"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+              >
+                <Twitter className="h-4 w-4" />
               </Link>
             </div>
           </div>
