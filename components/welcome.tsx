@@ -2,6 +2,7 @@
 
 import { Search, Twitter, Github, Notebook, Heart, X, BookOpen, Compass, GitFork, Route, Cpu, Layout, FileText, Link2, Video, FileQuestion, Presentation } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Footer } from "@/components/footer"
 import { Input } from "@/components/ui/input"
 import { Header } from "@/components/header"
 import Link from "next/link"
@@ -229,37 +230,8 @@ export function Welcome() {
         
         </div>
       </main>
-
       {/* Footer */}
-      <footer className="border-t border-zinc-200 dark:border-zinc-800">
-        <div className="container mx-auto px-4 py-8 max-w-7xl">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center space-x-2">
-              <span className="text-sm text-zinc-600 dark:text-zinc-400 flex items-center gap-1.5">
-                Feito com <Heart className="h-3.5 w-3.5 text-red-500 fill-red-500" /> por Marcos Coelho
-              </span>
-            </div>
-            <div className="flex items-center space-x-4">             
-              <Link
-                href="https://github.com/mviniciusca"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-              >
-                <Github className="h-5 w-5" />
-              </Link>
-              <Link
-                href="https://twitter.com/marcosvca_"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-              >
-                <Twitter className="h-5 w-5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+     <Footer />
     </div>
   )
 }
