@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, Search, Twitter, Notebook, FileText, GitFork, Route, Video, X } from "lucide-react"
+import { Github, Search, Twitter, Notebook, BookOpen, Compass, GitFork, Route, Cpu, Layout, FileText, Presentation, Link2, Video, FileQuestion, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
@@ -67,10 +67,17 @@ const searchableContent = [
 
 // Tags para sugestões de busca
 const tags = [
-  { id: "introducao", title: "Introdução", icon: FileText, weight: "lg" },
-  { id: "mapa-mental", title: "Mapa Mental", icon: GitFork, weight: "lg" },
-  { id: "trilha", title: "Trilha", icon: Route, weight: "lg" },
-  { id: "videos", title: "Vídeos", icon: Video, weight: "md" }
+  { id: "introducao", title: "Introdução", icon: BookOpen, weight: "md" },
+  { id: "visao-geral", title: "Visão Geral", icon: Compass, weight: "md" },
+  { id: "mapa-mental", title: "Mapa Mental", icon: GitFork, weight: "md" },
+  { id: "trilha", title: "Trilha de Desenvolvimento", icon: Route, weight: "md" },
+  { id: "ia", title: "IA no Desenvolvimento", icon: Cpu, weight: "md" },
+  { id: "exemplos", title: "Exemplos de Apps", icon: Layout, weight: "md" },
+  { id: "relatorio", title: "Relatório Final", icon: FileText, weight: "md" },
+  { id: "apresentar", title: "Onde Apresentar", icon: Presentation, weight: "md" },
+  { id: "recursos", title: "Recursos Adicionais", icon: Link2, weight: "md" },
+  { id: "videos", title: "Vídeos", icon: Video, weight: "md" },
+  { id: "faq", title: "FAQ", icon: FileQuestion, weight: "md" }
 ]
 
 export function Welcome() {
@@ -132,7 +139,10 @@ export function Welcome() {
       <main className="flex-1 flex items-center justify-center px-4">
         <div className="max-w-xl w-full">
           <div className="text-center mb-8">
-            <h1 className="text-xl md:text-2xl font-semibold mb-3 bg-gradient-to-r from-zinc-900 to-zinc-500 dark:from-zinc-300 dark:to-zinc-600 bg-clip-text text-transparent">
+            <div className="flex justify-center mb-4">
+              <Notebook className="h-12 w-12 text-zinc-900 dark:text-white" />
+            </div>
+            <h1 className="text-xl md:text-2xl font-semibold mb-3 text-zinc-900 dark:text-white">
               Desenvolvimento de Projetos Extensionistas
             </h1>
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
