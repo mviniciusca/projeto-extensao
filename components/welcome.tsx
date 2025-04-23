@@ -127,9 +127,10 @@ export function Welcome() {
             <Notebook className="h-6 w-6 text-zinc-900 dark:text-white" />
             <span className="text-lg font-semibold text-zinc-900 dark:text-white">Projeto de Extensão</span>
           </Link>
-          <Button variant="outline" asChild>
+          <Button variant="outline" asChild className="flex items-center gap-2">
             <Link href="/">
-              Acessar Guia Completo
+              <BookOpen className="h-4 w-4" />
+              <span>Guia Completo</span>
             </Link>
           </Button>
         </div>
