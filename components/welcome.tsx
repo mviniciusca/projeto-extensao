@@ -149,7 +149,7 @@ export function Welcome() {
               Guia de Projeto de Extensão
             </h1>
             <p className="text-sm text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
-              Guia prático para projetos alinhados aos ODS da ONU para alunos de Análise e Desenvolvimento de Sistemas.
+              Guia e Mapa Mental para conclusão do Projeto de Extensão do curso <br/> de Análise e Desenvolvimento de Sistemas.
             </p>
           </div>
 
