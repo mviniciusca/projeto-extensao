@@ -147,8 +147,8 @@ export function Welcome() {
             <div className="flex justify-center mb-4">
               <Notebook className="h-12 w-12 text-zinc-900 dark:text-white" />
             </div>
-            <h1 className="text-xl md:text-2xl font-semibold mb-3 text-zinc-900 dark:text-white">
-              Guia de Projetos de Extensão
+            <h1 className="text-xl md:text-xl font-semibold mb-3 text-zinc-900 dark:text-white">
+              Guia de Projeto de Extensão
             </h1>
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
               Guia prático para projetos alinhados aos ODS da ONU para alunos de Análise e Desenvolvimento de Sistemas.
@@ -199,7 +199,7 @@ export function Welcome() {
             <div className="text-center mb-8">
               <div className="flex items-center justify-between mb-3">
                 <p className="text-xs text-zinc-500 dark:text-zinc-400">
-                  Sugestões:
+                  Tópicos:
                 </p>
                 <button
                   onClick={() => setShowSuggestions(false)}
@@ -233,23 +233,8 @@ export function Welcome() {
             >
               Mostrar sugestões
             </button>
-          )}
-
-          {/* Social Links */}
-          <div className="flex items-center justify-center gap-4">
-            <Button variant="outline" size="icon" asChild>
-              <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
-                <Github className="h-4 w-4" />
-                <span className="sr-only">GitHub</span>
-              </Link>
-            </Button>
-            <Button variant="outline" size="icon" asChild>
-              <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <Twitter className="h-4 w-4" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-            </Button>
-          </div>
+          )}         
+        
         </div>
       </main>
 
