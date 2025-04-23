@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, Search, Twitter, Notebook, Target, Code, FileText, PenTool, Cpu, Layout, X, Video, BookOpen } from "lucide-react"
+import { Github, Search, Twitter, Notebook, FileText, GitFork, Route, Video, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
@@ -57,18 +57,20 @@ const searchableContent = [
     id: "faq",
     title: "FAQ",
     content: "Perguntas frequentes sobre relatório, documentação, depoimentos, entregas e processo."
+  },
+  {
+    id: "videos",
+    title: "Vídeos para Aprender Mais",
+    content: "Tutoriais e guias em vídeo: Como fazer projeto de extensão 2025, Como fazer projeto de extensão - Rápido e fácil, Projeto de Extensão ADS - Como Fazer Unopar e Anhanguera, Projeto de Extensão - Anhanguera 2023. Canais: É Hora de Aprender, ADS Code, Hora do EAD."
   }
 ]
 
 // Tags para sugestões de busca
 const tags = [
-  { id: "ods", title: "ODS", icon: Target, weight: "lg" },
-  { id: "desenvolvimento", title: "Dev", icon: Code, weight: "lg" },
-  { id: "react", title: "React", icon: PenTool, weight: "lg" },
-  { id: "relatorio", title: "Docs", icon: FileText, weight: "md" },
-  { id: "ia", title: "IA", icon: Cpu, weight: "md" },
-  { id: "exemplos", title: "Apps", icon: Layout, weight: "md" },
-  { id: "videos", title: "Vídeos", icon: Video, weight: "sm" }
+  { id: "introducao", title: "Introdução", icon: FileText, weight: "lg" },
+  { id: "mapa-mental", title: "Mapa Mental", icon: GitFork, weight: "lg" },
+  { id: "trilha", title: "Trilha", icon: Route, weight: "lg" },
+  { id: "videos", title: "Vídeos", icon: Video, weight: "md" }
 ]
 
 export function Welcome() {
