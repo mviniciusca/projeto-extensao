@@ -148,7 +148,7 @@ export function Welcome() {
             <h1 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">
               Guia de Projeto de Extensão
             </h1>
-            <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+            <p className="text-sm text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
               Guia prático para projetos alinhados aos ODS da ONU para alunos de Análise e Desenvolvimento de Sistemas.
             </p>
           </div>
