@@ -58,13 +58,10 @@ export function Header() {
           <ModeToggle />
         </div>
 
-        {/* Mobile Navigation Toggle */}
-        <div className="flex md:hidden items-center space-x-2">
-          <ModeToggle />
-          <Button variant="ghost" size="icon" onClick={toggleMenu} className="text-zinc-700 dark:text-zinc-300">
-            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </Button>
-        </div>
+        {/* Mobile Menu Button */}
+        <Button variant="ghost" size="icon" onClick={toggleMenu} className="md:hidden">
+          {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </Button>
       </div>
 
       {/* Mobile Menu */}
@@ -127,10 +124,12 @@ export function Header() {
               <FileText className="h-4 w-4" />
               <span>Relatório Final</span>
             </Link>
-            <div className="pt-4 border-t border-zinc-200 dark:border-zinc-800">
-              <div className="w-full">
-                <DownloadButton />
+            <div className="flex flex-col space-y-4 pt-4 border-t border-zinc-200 dark:border-zinc-800">
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Tema</span>
+                <ModeToggle />
               </div>
+              <DownloadButton className="w-full" />
             </div>
           </nav>
         </div>
