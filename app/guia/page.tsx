@@ -14,6 +14,7 @@ import { FAQ } from "@/components/faq"
 import { Conclusao } from "@/components/conclusao"
 import { SidebarNav } from "@/components/ui/sidebar-nav"
 import { MobileNav } from "@/components/ui/mobile-nav"
+import { ScrollToTop } from "@/components/ui/scroll-to-top"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { BookOpen, Github, Notebook, Heart, Twitter } from "lucide-react"
@@ -52,6 +53,7 @@ export default function GuiaPage() {
       </header>
 
       <MobileNav />
+      <ScrollToTop />
 
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex relative gap-8">

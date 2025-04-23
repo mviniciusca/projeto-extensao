@@ -4,7 +4,7 @@ import { Github, Search, Twitter, Notebook, BookOpen, Compass, GitFork, Route, C
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { ModeToggle } from "@/components/mode-toggle"
 
 // Conteúdo pesquisável expandido
@@ -85,6 +85,11 @@ export function Welcome() {
   const [searchQuery, setSearchQuery] = useState("")
   const [searchResults, setSearchResults] = useState<typeof searchableContent>([])
   const [showSuggestions, setShowSuggestions] = useState(true)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const handleSearch = (query: string) => {
     setSearchQuery(query)
@@ -117,6 +122,10 @@ export function Welcome() {
       default:
         return `${baseStyle} text-xs text-zinc-600 dark:text-zinc-400`
     }
+  }
+
+  if (!mounted) {
+    return null // Return null on server-side to prevent hydration mismatch
   }
 
   return (
