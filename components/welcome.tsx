@@ -238,13 +238,13 @@ export function Welcome() {
           {/* Social Links */}
           <div className="flex items-center justify-center gap-4">
             <Button variant="outline" size="icon" asChild>
-              <Link href="https://github.com/mviniciusca" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
                 <Github className="h-4 w-4" />
                 <span className="sr-only">GitHub</span>
               </Link>
             </Button>
             <Button variant="outline" size="icon" asChild>
-              <Link href="https://twitter.com/marcosvca_" target="_blank" rel="noopener noreferrer">
+              <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                 <Twitter className="h-4 w-4" />
                 <span className="sr-only">Twitter</span>
               </Link>
@@ -262,26 +262,14 @@ export function Welcome() {
                 Feito com <Heart className="h-3.5 w-3.5 text-red-500 fill-red-500" /> por Marcos Coelho
               </span>
             </div>
-            <div className="flex items-center space-x-4">
-              <Link
-                href="/"
-                className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-              >
-                Início
-              </Link>
-              <Link
-                href="/#faq"
-                className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-              >
-                FAQ
-              </Link>
+            <div className="flex items-center space-x-4">             
               <Link
                 href="https://github.com/mviniciusca"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
               >
-                <Github className="h-4 w-4" />
+                <Github className="h-5 w-5" />
               </Link>
               <Link
                 href="https://twitter.com/marcosvca_"
@@ -289,7 +277,7 @@ export function Welcome() {
                 rel="noopener noreferrer"
                 className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
               >
-                <Twitter className="h-4 w-4" />
+                <Twitter className="h-5 w-5" />
               </Link>
             </div>
           </div>
