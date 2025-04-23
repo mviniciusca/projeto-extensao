@@ -4,8 +4,6 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toggle"
 import { Github, BookOpen, Notebook } from "lucide-react"
-import { Analytics } from "@vercel/analytics/react"
-<Analytics />
 
 export function Header() {
     return (
