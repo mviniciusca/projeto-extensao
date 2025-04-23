@@ -148,7 +148,7 @@ export function ObjetivosDesenvolvimento() {
       <SectionTitle
         id="ods"
         title="Objetivos de Desenvolvimento Sustentável"
-        icon={<Globe className="h-6 w-6" />}
+        icon={<Globe className="h-5 w-5" />}
       />
 
       <Card>

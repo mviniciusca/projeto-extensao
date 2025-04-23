@@ -5,7 +5,7 @@ import { FileText } from "lucide-react"
 export function RelatorioFinal() {
   return (
     <section className="mb-12">
-      <SectionTitle id="relatorio" title="Preparando o Relatório Final" icon={<FileText className="h-6 w-6" />} />
+      <SectionTitle id="relatorio" title="Preparando o Relatório Final" icon={<FileText className="h-5 w-5" />} />
 
       <Card>
         <CardContent className="pt-6">
