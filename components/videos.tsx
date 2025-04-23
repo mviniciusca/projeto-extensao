@@ -62,7 +62,7 @@ export function Videos() {
       <SectionTitle 
         id="videos"
         title="Vídeos para Aprender Mais"
-        icon={<VideoIcon className="h-6 w-6" />}
+        icon={<VideoIcon className="h-5 w-5" />}
       />
       
       <div className="-mx-6 px-6 md:mx-0 md:px-0">

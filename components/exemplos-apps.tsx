@@ -6,7 +6,7 @@ import { Smartphone } from "lucide-react"
 export function ExemplosApps() {
   return (
     <section className="mb-12">
-      <SectionTitle id="exemplos" title="Exemplos de Aplicativos por ODS" icon={<Smartphone className="h-6 w-6" />} />
+      <SectionTitle id="exemplos" title="Exemplos de Apps" icon={<Smartphone className="h-5 w-5" />} />
 
       <Card>
         <CardContent className="pt-6">

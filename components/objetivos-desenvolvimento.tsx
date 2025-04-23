@@ -169,14 +169,14 @@ export function ObjetivosDesenvolvimento() {
                   <Card key={objective.id} className="hover:shadow-lg transition-shadow">
                     <CardContent className="p-3 md:p-4">
                       <div className="flex items-start gap-3 md:flex-col md:gap-3">
-                        <div className={`w-8 h-8 md:w-10 md:h-10 rounded-lg ${objective.color} flex items-center justify-center flex-shrink-0`}>
-                          <Icon className="h-4 w-4 md:h-5 md:w-5 text-white" />
+                        <div className={`w-6 h-6 md:w-8 md:h-8 rounded-lg ${objective.color} flex items-center justify-center flex-shrink-0`}>
+                          <Icon className="h-3 w-3 md:h-4 md:w-4 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-sm md:text-base font-semibold mb-0.5 md:mb-1 text-zinc-900 dark:text-white">
+                          <h3 className="text-xs md:text-sm font-semibold mb-0.5 md:mb-1 text-zinc-900 dark:text-white">
                             {objective.id}. {objective.title}
                           </h3>
-                          <p className="text-xs md:text-sm text-zinc-700 dark:text-zinc-300 line-clamp-2 md:line-clamp-none">
+                          <p className="text-xs md:text-xs text-zinc-700 dark:text-zinc-300 line-clamp-2 md:line-clamp-none">
                             {objective.description}
                           </p>
                         </div>

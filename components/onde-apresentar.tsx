@@ -8,7 +8,7 @@ export function OndeApresentar() {
       <SectionTitle
         id="apresentar"
         title="Onde Apresentar Seu Projeto"
-        icon={<PresentationIcon className="h-6 w-6" />}
+        icon={<PresentationIcon className="h-5 w-5" />}
       />
 
       <Card>

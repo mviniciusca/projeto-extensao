@@ -6,7 +6,7 @@ import { HelpCircle } from "lucide-react"
 export function FAQ() {
   return (
     <section className="mb-12">
-      <SectionTitle id="faq" title="Perguntas Frequentes" icon={<HelpCircle className="h-6 w-6" />} />
+      <SectionTitle id="faq" title="Perguntas Frequentes" icon={<HelpCircle className="h-5 w-5" />} />
 
       <Card>
         <CardContent className="pt-6">

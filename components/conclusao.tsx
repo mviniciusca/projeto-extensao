@@ -5,7 +5,7 @@ import { CheckCircle } from "lucide-react"
 export function Conclusao() {
   return (
     <section className="mb-12">
-      <SectionTitle id="conclusao" title="Conclusão" icon={<CheckCircle className="h-6 w-6" />} />
+      <SectionTitle id="conclusao" title="Conclusão" icon={<CheckCircle className="h-5 w-5" />} />
 
       <Card>
         <CardContent className="pt-6">

@@ -8,7 +8,7 @@ export function MapaMental() {
       <SectionTitle 
         id="mapa-mental" 
         title="Mapa Mental: Do ODS ao Aplicativo" 
-        icon={<Map className="h-6 w-6" />} 
+        icon={<Map className="h-5 w-5" />} 
       />
 
       <Card>

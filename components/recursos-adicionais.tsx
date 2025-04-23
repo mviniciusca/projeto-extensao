@@ -6,7 +6,7 @@ import { Link2 } from "lucide-react"
 export function RecursosAdicionais() {
   return (
     <section className="mb-12">
-      <SectionTitle id="recursos" title="Recursos Adicionais" icon={<Link2 className="h-6 w-6" />} />
+      <SectionTitle id="recursos" title="Recursos Adicionais" icon={<Link2 className="h-5 w-5" />} />
 
       <Card>
         <CardContent className="pt-6">

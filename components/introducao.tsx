@@ -9,7 +9,7 @@ export function Introducao() {
         id="introducao"
         title="Guia de Desenvolvimento de Projeto de Extensão"
         subtitle="Mapa Mental para Resolução de Projeto Integrado com ODS da ONU para realização do projeto de extensão para alunos do curso de Análise e Desenvolvimento de Sistemas."
-        icon={<BookOpen className="h-6 w-6" />}
+        icon={<BookOpen className="h-5 w-5" />}
       />
 
       <Card>

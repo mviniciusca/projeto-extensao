@@ -5,7 +5,7 @@ import { Eye } from "lucide-react"
 export function VisaoGeral() {
   return (
     <section className="mb-12">
-      <SectionTitle id="visao-geral" title="Visão Geral do Projeto" icon={<Eye className="h-6 w-6" />} />
+      <SectionTitle id="visao-geral" title="Visão Geral do Projeto" icon={<Eye className="h-5 w-5" />} />
 
       <Card>
         <CardContent className="pt-6">

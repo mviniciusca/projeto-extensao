@@ -9,7 +9,7 @@ export function IntegrandoIA() {
         id="ia"
         title="Integrando Inteligência Artificial no Desenvolvimento"
         subtitle="Como Utilizar IA para Potencializar seu Projeto"
-        icon={<Sparkles className="h-6 w-6" />}
+        icon={<Sparkles className="h-5 w-5" />}
       />
 
       <Card>
