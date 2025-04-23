@@ -142,16 +142,16 @@ export function Welcome() {
 
       {/* Main Content */}
       <main className="flex-1 flex items-center justify-center px-4">
-        <div className="max-w-xl w-full">
+        <div className="max-w-3xl w-full">
           <div className="text-center mb-8">
             <div className="flex justify-center mb-4">
               <Notebook className="h-12 w-12 text-zinc-900 dark:text-white" />
             </div>
             <h1 className="text-xl md:text-2xl font-semibold mb-3 text-zinc-900 dark:text-white">
-              Desenvolvimento de Projetos Extensionistas
+              Guia de Projetos de Extensão
             </h1>
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
-              Guia prático para projetos alinhados aos ODS da ONU
+              Guia prático para projetos alinhados aos ODS da ONU para alunos de Análise e Desenvolvimento de Sistemas.
             </p>
           </div>
 
