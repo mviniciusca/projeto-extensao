@@ -1,6 +1,6 @@
 "use client"
 
-import { Search, Twitter, Github, Notebook, Heart, X, BookOpen, Compass, GitFork, Route, Cpu, Layout, FileText, Link2, Video, FileQuestion, Presentation } from "lucide-react"
+import { Search, Twitter, Github, Notebook, Heart, X, BookOpen, Compass, GitFork, Route, Cpu, Layout, FileText, Link2, Video, FileQuestion, Presentation, ClipboardList } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Footer } from "@/components/footer"
 import { Videos } from "@/components/videos"
@@ -151,11 +151,17 @@ export function Welcome() {
                         <p className="text-sm text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
                             Guia e Mapa Mental para conclusão do Projeto de Extensão do curso <br /> de Análise e Desenvolvimento de Sistemas.
                         </p>
-                        <div className="flex justify-center">
-                            <Button asChild className="gap-2">
+                        <div className="flex justify-center gap-3">
+                            <Button asChild variant="outline" className="gap-2">
                                 <Link href="/guia">
                                     <BookOpen className="h-4 w-4" />
                                     Acessar Guia Completo
+                                </Link>
+                            </Button>
+                            <Button asChild className="gap-2">
+                                <Link href="/exemplo-relatorio">
+                                    <ClipboardList className="h-4 w-4" />
+                                    Exemplo Completo
                                 </Link>
                             </Button>
                         </div>
